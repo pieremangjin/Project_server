@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <script src="function1.js"></script> -->
+    <link rel="stylesheet" href="sidemenu.css" />
+    <script src="function1.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">  
+    <header>
+      <div class="row1">
+      <div class="item">
+        <input class="loadfile" id="file" type="file" accept="video/mp4"/>
+        <video  width="600" height="400" class="video1" id="video1" controls  style="border: 1px solid #ddd;" ></video>
+        <script>
+          const inputFile = document.getElementById("file");
+          const video = document.getElementById("video1");
+
+          inputFile.addEventListener("change", function(){
+              const file = inputFile.files[0];
+              const videourl = URL.createObjectURL(file);
+              video.setAttribute("src", videourl);
+              video.play();
+          })
+        </script>
+      </div>
+    </header>
+      <div class="item">
+        <input class="loadfile" id="file2" type="file" accept="video/mp4"/>
+        <video  width="600" height="400" class="video2" id="video2" controls  style="border: 1px solid #ddd;" ></video>
+        <script>
+          const inputFile2 = document.getElementById("file2");
+          const video2 = document.getElementById("video2");
+    
+          inputFile2.addEventListener("change", function(){
+              const file = inputFile2.files[0];
+              const videourl = URL.createObjectURL(file);
+              video2.setAttribute("src", videourl);
+              video2.play();
+          })
+          </script>
+      </div>
+      </div>
+
+    </div>
+    <!-- sidemenu -->
+    <nav class="main-menu">
+      <div>
+         <a class="logo" href="loadfile.html">
+         </a> 
+       </div> 
+     <div class="settings"></div>
+     <div class="scrollbar" id="style-1">
+           
+     <ul>
+       
+      <li>                                   
+        <a href="index.html">
+        <i class="fa fa-home fa-lg"></i>
+        <span class="nav-text">Main</span>
+        </a>
+      </li>
+
+     <li class="darkerli">
+      <a href="loadfile.html">
+      <i class="fa fa-desktop fa-lg"></i>
+      <span class="nav-text">Load</span>
+      </a>
+      </li>
+     </ul>
+     </div>
+  </nav>
+  </body>
+</html>
+
+
